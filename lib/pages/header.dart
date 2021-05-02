@@ -83,13 +83,15 @@ class HeaderSection extends StatelessWidget {
   }
 }
 
+
+
 class IntroductionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return VStack(
       [
         " - ABOUT ME".text.gray500.widest.sm.make(),
-        if(context.isMobile)10.heightBox else 0.heightBox,
+        if (context.isMobile) 10.heightBox else 0.heightBox,
         "Developer for mobile & web, dart, flutter and firebase | "
                 "UX/UI Designer | "
                 "Masters Graduate - University of Adelaide | "
@@ -129,7 +131,7 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Icon(
-      AntDesign.codesquare,
+      AntDesign.API,
       size: 50,
       color: ThemeColors.accentColor,
     );
@@ -140,10 +142,6 @@ class SocialAccounts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return [
-      Icon(AntDesign.twitter, color: Colors.white).mdClick(() {
-        launch("https://twitter.com/AdityaNath_K");
-      }).make(),
-      20.widthBox,
       //Icon(AntDesign.instagram, color: Colors.white).mdClick(() {
       //  launch("https://instagram.com");
       //}).make(),
@@ -152,10 +150,18 @@ class SocialAccounts extends StatelessWidget {
         launch("https://github.com/kronosking007");
       }).make(),
       20.widthBox,
-      Icon(AntDesign.linkedin_square, color: Colors.white).mdClick(() {
+      Icon(AntDesign.linkedin_square, color: Color(0xFF0077B5)).mdClick(() {
         launch("https://www.linkedin.com/in/aditya-nath-kalla-59068a114/");
       }).make(),
       20.widthBox,
+      Icon(AntDesign.android1, color: Colors.green).mdClick(() {
+        launch("https://play.google.com/store/apps/developer?id=Kronos+Apps");
+      }).make(),
+      20.widthBox,
+      Icon(AntDesign.twitter, color: Color(0xFF1DA1F2)).mdClick(() {
+        launch("https://twitter.com/AdityaNath_K");
+      }).make(),
+
     ].hStack();
   }
 }
